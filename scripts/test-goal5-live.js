@@ -27,7 +27,7 @@ const evidence = {
   },
   control: { agentEpoch: 0, humanEpoch: 0, returnedAgentEpoch: 0, foreignRejected: false, staleRejected: false, replayRejected: false },
   commands: { humanAssist: false, handoffNavigated: false, recordedEdit: false, humanSecretApplied: false, humanSecretPersisted: false, cancellationStatus: null },
-  telemetry: { rawTextInEvidence: false, rawTextInControlResult: false, rrwebContainsSecret: false },
+  telemetry: { rawTextInEvidence: false, rawTextInControlResult: false, rrwebContainsSecret: false, screenshotContainsSecret: false, staleScreenshotRejected: false },
 }
 let browserSessionId
 let resourceEpoch
@@ -160,6 +160,17 @@ async function controlCommand(body, expected = []) {
     await sleep(700)
     evidence.telemetry.rrwebContainsSecret = JSON.stringify(rrwebEvents).includes(secretSentinel)
     assert.equal(evidence.telemetry.rrwebContainsSecret, false)
+    const staleScreenshot = await request(`/sdk/browser-sessions/${encodeURIComponent(browserSessionId)}/screenshot`, {
+      method: 'POST', body: JSON.stringify({ ownerSessionId, epoch: resourceEpoch + 1, fullPage: false }),
+    }, [409])
+    assert.equal(staleScreenshot.status, 409)
+    evidence.telemetry.staleScreenshotRejected = true
+    const screenshotResponse = await request(`/sdk/browser-sessions/${encodeURIComponent(browserSessionId)}/screenshot`, {
+      method: 'POST', body: JSON.stringify({ ownerSessionId, epoch: resourceEpoch, fullPage: false }),
+    })
+    const screenshotBytes = Buffer.from(await screenshotResponse.arrayBuffer())
+    evidence.telemetry.screenshotContainsSecret = screenshotBytes.includes(Buffer.from(secretSentinel))
+    assert.equal(evidence.telemetry.screenshotContainsSecret, false)
 
     const recordedPromise = waitForEvent(controlSocket, 'control-result', 15000, result => result?.commandId === 'human-recorded')
     controlSocket.emit('control-command', { commandId: 'human-recorded', kind: 'navigate', mode: 'record', url: fixtureUrl })
@@ -172,7 +183,15 @@ async function controlCommand(body, expected = []) {
     const returned = await controlAcquire('agent')
     evidence.control.returnedAgentEpoch = returned.controlEpoch
     assert.equal(returned.controlEpoch, human.controlEpoch + 1)
-    evidence.criteria.freshObservation = Number.isInteger(returned.controlEpoch) && typeof returned.currentUrl === 'string'
+    assert.equal(returned.observationReady, false)
+    const freshSnapshot = waitForEvent(socket, 'rrweb-event', 15000, event => event?.type === 2)
+    socket.emit('request-refresh')
+    await freshSnapshot
+    const observationAck = await json(`/sdk/browser-sessions/${encodeURIComponent(browserSessionId)}/control/observation/ack`, {
+      method: 'POST', body: JSON.stringify({ ownerSessionId, actor: 'agent', controlEpoch: returned.controlEpoch }),
+    })
+    assert.equal(observationAck.data.observationReady, true)
+    evidence.criteria.freshObservation = Number.isInteger(returned.controlEpoch) && observationAck.data.observationReady === true
 
     const stale = await controlCommand({ ownerSessionId, actor: 'agent', controlEpoch: human.controlEpoch, commandId: 'stale-after-return', kind: 'refresh', mode: 'assist' }, [409])
     assert.equal(stale.code, 'stale_control')
@@ -212,7 +231,9 @@ async function controlCommand(body, expected = []) {
 
     const serialized = JSON.stringify(evidence)
     assert.equal(serialized.includes(secretSentinel), false)
-    evidence.criteria.credentialBoundary = !evidence.commands.humanSecretPersisted && !evidence.telemetry.rrwebContainsSecret
+    evidence.criteria.credentialBoundary = !evidence.commands.humanSecretPersisted
+      && !evidence.telemetry.rrwebContainsSecret
+      && !evidence.telemetry.screenshotContainsSecret
     evidence.telemetry.rawTextInEvidence = serialized.includes(secretSentinel)
     assert.equal(evidence.telemetry.rawTextInEvidence, false)
     assert.equal(evidence.telemetry.rawTextInControlResult, false)

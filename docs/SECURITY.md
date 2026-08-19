@@ -50,5 +50,5 @@ See `docs/GOAL4_READINESS.md` for the completed browser-view contract. Goal 5 im
 
 - Browser mutation requires a separate Maxun control lease; Goal 3 resource ownership and Goal 4 stream authorization are not sufficient control authorization.
 - Every mutating command must validate authenticated user, browser/session, actor, control epoch, expiry/heartbeat, and command identity server-side. Handoff and cancellation must invalidate delayed commands.
-- Human login, MFA, and CAPTCHA content remains ephemeral. Credentials and secret page data must not enter rrweb, screenshots, logs, model messages, workflow edits, or durable session events.
+- Human login, MFA, and CAPTCHA content remains ephemeral. Credentials and secret page data must not enter rrweb, screenshots, logs, model messages, workflow edits, or durable session events; screenshot fallback masks inputs, frames, and marked-sensitive elements, and durable URLs strip userinfo/query/fragment components.
 - Goal 4's client remains read-only; these Goal 5 gates have executable race and privacy evidence.

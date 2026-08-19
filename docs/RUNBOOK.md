@@ -103,11 +103,12 @@ Goal 4 executable checks cover claim-bound stream authorization, sensitive-input
 
 ## Goal 5 acceptance
 
-Read `goals/05-human-handoff.md` and `docs/GOAL5_READINESS.md`. The acceptance audit and live evidence must remain green before considering future changes safe:
+Read `goals/05-human-handoff.md` and `docs/GOAL5_READINESS.md`. The acceptance audit and live evidence must remain green before considering future changes safe. Production deployments must run Sequelize migrations before starting the backend; the backend image's command enforces this.
 
 ```bash
 python3 scripts/verify-goal5-readiness.py
 ./scripts/verify-source-pins.sh
+(cd sources/maxun && npm run build:server)
 ```
 
 Trace Maxun pause/resume/step/abort and Harness cancellation before editing. Keep Goal 4's browser details view read-only. Goal 5 implements server-side control ownership, control epochs, cancellation/quiescence, fresh-observation invalidation, workflow provenance, race tests, and credential-free MFA/login/CAPTCHA evidence. Preserve these guarantees in future changes.

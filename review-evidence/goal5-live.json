@@ -1,6 +1,6 @@
 {
   "goal": 5,
-  "ownerSessionId": "goal5-live-1787100318615",
+  "ownerSessionId": "goal5-live-1787126757722",
   "criteria": {
     "serverControlOwnership": true,
     "epochFence": true,
@@ -30,6 +30,8 @@
   "telemetry": {
     "rawTextInEvidence": false,
     "rawTextInControlResult": false,
-    "rrwebContainsSecret": false
+    "rrwebContainsSecret": false,
+    "screenshotContainsSecret": false,
+    "staleScreenshotRejected": true
   }
 }

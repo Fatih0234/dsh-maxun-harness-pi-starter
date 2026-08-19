@@ -56,9 +56,9 @@ The following acceptance gates are implemented and evidenced by `.local/evidence
 - Harness cancellation reaches the active interpreter/browser operation; slow navigation/action tests prove quiescence and classify unknown outcomes.
 - Pause/resume/abort reuse Maxun semantics and preserve partial-result behavior where applicable.
 - Assist-mode actions are absent from compiled workflow state; explicit recorded edits are transactional and provenance-tagged.
-- Returning control produces a fresh snapshot/observation and invalidates stale validations.
-- MFA/login/CAPTCHA fixtures prove that credentials and secret page content are absent from model messages, session events, screenshots, rrweb evidence, and logs.
-- Goal 1–4 regression gates, source-pin verification, package/catalog checks, Maxun/Harness builds, and Goal 5 live evidence all pass.
+- Returning control advances the observation epoch; agent commands remain blocked until the read-only stream acknowledges a post-transition full snapshot, and stale validations are invalidated.
+- MFA/login/CAPTCHA fixtures prove that credentials and secret page content are absent from model messages, session events, screenshots, rrweb evidence, and logs; screenshot fallback masks inputs, frames, and marked-sensitive elements.
+- Production packaging builds from `Dockerfile.backend`, runs migrations before startup, and uses model-declared unique lease/replay indexes; Goal 1–4 regression gates, source-pin verification, package/catalog checks, Maxun/Harness builds, and Goal 5 live evidence all pass.
 
 ## Deterministic test fixtures covered
 
