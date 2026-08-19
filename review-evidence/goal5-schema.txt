@@ -1,0 +1,10 @@
+Goal 5 deployment/schema review checks:
+
+- Docker backend build: `docker build --file Dockerfile.backend --tag maxun-review-backend:goal5-fixes .` passed.
+- Production image rrweb inspection: pinned backend dependency exposes `dist/rrweb.min.js`; resolver candidates handle this layout.
+- Fresh PostgreSQL database: `prepareSchema` followed by `sequelize-cli db:migrate` passed through all migrations.
+- Fresh database critical indexes:
+  - maxun_control_lease_browser_unique
+  - maxun_control_lease_owner_idx
+  - maxun_control_command_replay_unique
+  - maxun_control_command_epoch_idx
