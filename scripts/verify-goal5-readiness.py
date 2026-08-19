@@ -32,6 +32,8 @@ assert live["commands"]["cancellationStatus"] == "unknown"
 assert live["telemetry"]["rawTextInEvidence"] is False
 assert live["telemetry"]["rawTextInControlResult"] is False
 assert live["telemetry"]["rrwebContainsSecret"] is False
+assert live["telemetry"]["screenshotContainsSecret"] is False
+assert live["telemetry"]["staleScreenshotRejected"] is True
 assert web["passed"] is True
 
 required = [
