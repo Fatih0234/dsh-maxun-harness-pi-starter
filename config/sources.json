@@ -1,0 +1,63 @@
+{
+  "generatedAt": "2026-08-18",
+  "repositories": [
+    {
+      "id": "maxun",
+      "url": "https://github.com/getmaxun/maxun.git",
+      "sha": "6ef14c7c89fac18b5ba771a1228ee064e1d7810f",
+      "directory": "maxun",
+      "editable": true,
+      "branch": "pi/maxun-harness-integration",
+      "purpose": "Primary scraper/browser implementation"
+    },
+    {
+      "id": "deepseek-harness",
+      "url": "https://github.com/deepseek-ai/deepseek-harness.git",
+      "sha": "99f6f02fecdb7dff40c3fbc9470f5907c29f74ca",
+      "directory": "deepseek-harness",
+      "editable": true,
+      "branch": "pi/maxun-harness-integration",
+      "purpose": "Primary agent/product shell"
+    },
+    {
+      "id": "pi-reference",
+      "url": "https://github.com/earendil-works/pi.git",
+      "sha": "59a71b235dadb4ad0d67557a8abb0aaa093e68b4",
+      "directory": "pi-reference",
+      "editable": false,
+      "purpose": "Provider/auth/model behavior reference"
+    },
+    {
+      "id": "rrweb-reference",
+      "url": "https://github.com/rrweb-io/rrweb.git",
+      "sha": "3deb6e7da4528ddb33b5b7ff6a3e805d4ed14930",
+      "directory": "rrweb-reference",
+      "editable": false,
+      "purpose": "Future live browser replay reference"
+    },
+    {
+      "id": "playwright-reference",
+      "url": "https://github.com/microsoft/playwright.git",
+      "sha": "b856094ed589ef2682b34c20a7ab19831aae42db",
+      "directory": "playwright-reference",
+      "editable": false,
+      "purpose": "Browser/testing reference"
+    },
+    {
+      "id": "cordis-reference",
+      "url": "https://github.com/cordiverse/cordis.git",
+      "sha": "8cc9e33fab69e2d0476d126baaf2acb24e6a6ab4",
+      "directory": "cordis-reference",
+      "editable": false,
+      "purpose": "Harness composition reference"
+    },
+    {
+      "id": "maxun-node-sdk-reference",
+      "url": "https://github.com/getmaxun/node-sdk.git",
+      "sha": "523841293ca1f15a5da61523d158c45b3a5da0e2",
+      "directory": "maxun-node-sdk-reference",
+      "editable": false,
+      "purpose": "Existing Maxun external SDK client/reference"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+:root { font-family: system-ui, sans-serif; color: #202124; }
+body { margin: 0; background: #fafafa; }
+main { width: min(980px, calc(100% - 40px)); margin: 40px auto; }
+.product-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 18px; }
+.product-card { background: white; border: 1px solid #ddd; border-radius: 12px; padding: 18px; }
+.product-image { width: 100%; height: 180px; object-fit: cover; background: #eee; }
+.product-name { margin: 12px 0 6px; font-size: 20px; }
+.product-name a { color: inherit; }
+.meta { display: flex; gap: 12px; margin-top: 8px; }
+.price { font-weight: 700; }
+.pagination { margin-top: 28px; display: flex; gap: 16px; }

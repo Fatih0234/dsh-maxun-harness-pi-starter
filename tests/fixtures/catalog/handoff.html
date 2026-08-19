@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Goal 5 human handoff fixture</title>
+  <style>body{font:16px sans-serif;margin:32px}label{display:block;margin:12px 0}input{display:block;width:280px;padding:8px}</style>
+</head>
+<body>
+  <main data-public="goal5-handoff">Secure sign-in handoff fixture</main>
+  <form>
+    <label>Account <input name="account" autocomplete="username"></label>
+    <label>Password <input name="password" type="password" autocomplete="current-password"></label>
+    <label>One-time code <input name="otp" inputmode="numeric" data-sensitive></label>
+    <label>CAPTCHA response <input name="captcha" data-private></label>
+  </form>
+</body>
+</html>

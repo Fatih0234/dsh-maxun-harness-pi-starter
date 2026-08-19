@@ -1,0 +1,5 @@
+# Safe to copy: contains only an environment-variable reference, not the API key.
+llm-pi-ai:
+  providers:
+    opencode-go:
+      apiKeyEnv: OPENCODE_API_KEY

@@ -1,0 +1,42 @@
+[
+  {
+    "product_name": "Aurora Headphones",
+    "price": "$79.00",
+    "rating": "4.7",
+    "review_count": "128",
+    "image_path": "/images/aurora-headphones.svg",
+    "product_path": "/products/aurora-headphones.html"
+  },
+  {
+    "product_name": "Meridian Keyboard",
+    "price": "$119.00",
+    "rating": "4.5",
+    "review_count": "84",
+    "image_path": "/images/meridian-keyboard.svg",
+    "product_path": "/products/meridian-keyboard.html"
+  },
+  {
+    "product_name": "Atlas Webcam",
+    "price": "$64.00",
+    "rating": "4.6",
+    "review_count": "211",
+    "image_path": "/images/atlas-webcam.svg",
+    "product_path": "/products/atlas-webcam.html"
+  },
+  {
+    "product_name": "Nova USB-C Hub",
+    "price": "$49.00",
+    "rating": "4.4",
+    "review_count": "156",
+    "image_path": "/images/nova-usb-c-hub.svg",
+    "product_path": "/products/nova-usb-c-hub.html"
+  },
+  {
+    "product_name": "Orbit Desk Lamp",
+    "price": "$39.00",
+    "rating": "4.8",
+    "review_count": "302",
+    "image_path": "/images/orbit-desk-lamp.svg",
+    "product_path": "/products/orbit-desk-lamp.html"
+  }
+]

@@ -1,0 +1,11 @@
+# Goal-2 development overlay. Harness profile layers use last-write-wins per row.
+- id: agent-default-model
+  config:
+    provider: opencode-go
+    model: deepseek-v4-flash
+
+- insert:
+    - id: maxun-tools
+      name: '@deepseek-ai/dsh-tool-maxun'
+    - id: maxun-browser-ui
+      name: '@deepseek-ai/dsh-client-ui-maxun'
