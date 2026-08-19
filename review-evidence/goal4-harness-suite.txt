@@ -1,0 +1,8 @@
+Goal 4 regression command:
+LANG=C LANGUAGE=C LC_ALL=C ./node_modules/.bin/vitest run --testTimeout 30000
+
+Test Files 810 passed | 9 skipped (819)
+Tests 13512 passed | 110 skipped (13622)
+Exit 0
+
+The suite intentionally emits expected React error-boundary diagnostics from scoped-slot tests; the final Vitest exit was successful.

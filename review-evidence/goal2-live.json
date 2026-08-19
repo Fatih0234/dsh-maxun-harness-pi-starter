@@ -1,0 +1,88 @@
+{
+  "fixtureUrl": "http://172.21.0.1:4173/page1.html",
+  "draftId": "513fdb21-355c-4a13-b9c2-f591006cbfcf",
+  "listCandidates": 4,
+  "selectedFields": [
+    "image_url",
+    "product_url",
+    "product_name",
+    "price",
+    "rating",
+    "review_count"
+  ],
+  "fieldOperations": [
+    "exclude",
+    "include",
+    "rename"
+  ],
+  "preview": {
+    "rows": 5,
+    "pagesVisited": 3,
+    "diagnostics": []
+  },
+  "paginationTestedAfterPreview": true,
+  "validation": {
+    "valid": true,
+    "pagesVisited": 3,
+    "coverage": {
+      "db45e81c-ccb6-4c36-9adf-b258a9781f26": 1,
+      "054d15a3-4dbb-4199-9de6-953d72c83eba": 1,
+      "a6ed7729-30b8-42ad-8e96-ad514cbb42e5": 1,
+      "282bb6fe-56ef-4c9d-b326-c9be55f77d33": 1,
+      "843a5da0-20ce-4de6-bb5b-9702296709c7": 1,
+      "3dcede43-f0ed-4b61-a4e9-76a41aeb81c0": 1
+    },
+    "diagnostics": []
+  },
+  "compiledRobotId": "0ece0b81-b73c-4265-9771-264abe0e9bf7",
+  "nameConflict": {
+    "status": 409,
+    "code": "robot_name_conflict"
+  },
+  "run": {
+    "status": "success",
+    "runId": "d71e76fc-cb99-4665-b632-d3c8167990c9",
+    "rows": [
+      {
+        "price": "$79.00",
+        "rating": "4.7",
+        "image_url": "http://172.21.0.1:4173/images/aurora-headphones.svg",
+        "product_url": "http://172.21.0.1:4173/products/aurora-headphones.html",
+        "product_name": "Aurora Headphones",
+        "review_count": "128 reviews"
+      },
+      {
+        "price": "$119.00",
+        "rating": "4.5",
+        "image_url": "http://172.21.0.1:4173/images/meridian-keyboard.svg",
+        "product_url": "http://172.21.0.1:4173/products/meridian-keyboard.html",
+        "product_name": "Meridian Keyboard",
+        "review_count": "84 reviews"
+      },
+      {
+        "price": "$64.00",
+        "rating": "4.6",
+        "image_url": "http://172.21.0.1:4173/images/atlas-webcam.svg",
+        "product_url": "http://172.21.0.1:4173/products/atlas-webcam.html",
+        "product_name": "Atlas Webcam",
+        "review_count": "211 reviews"
+      },
+      {
+        "price": "$49.00",
+        "rating": "4.4",
+        "image_url": "http://172.21.0.1:4173/images/nova-usb-c-hub.svg",
+        "product_url": "http://172.21.0.1:4173/products/nova-usb-c-hub.html",
+        "product_name": "Nova USB-C Hub",
+        "review_count": "156 reviews"
+      },
+      {
+        "price": "$39.00",
+        "rating": "4.8",
+        "image_url": "http://172.21.0.1:4173/images/orbit-desk-lamp.svg",
+        "product_url": "http://172.21.0.1:4173/products/orbit-desk-lamp.html",
+        "product_name": "Orbit Desk Lamp",
+        "review_count": "302 reviews"
+      }
+    ]
+  }
+}

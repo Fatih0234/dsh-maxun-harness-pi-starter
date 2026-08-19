@@ -1,0 +1,11 @@
+{
+  "goal": 4,
+  "renderer": "rrweb Replayer",
+  "packages": [
+    {"name": "rrweb", "version": "2.1.1", "license": "MIT"},
+    {"name": "rrweb-snapshot", "version": "2.1.1", "license": "MIT"},
+    {"name": "socket.io-client", "version": "4.8.3", "license": "MIT"}
+  ],
+  "notice": "sources/deepseek-harness/THIRD_PARTY_NOTICES.md",
+  "apiKeyInEvidence": false
+}

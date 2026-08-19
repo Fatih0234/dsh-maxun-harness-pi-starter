@@ -1,0 +1,19 @@
+{
+  "goal": 4,
+  "test": "sources/deepseek-harness/apps/web/tests/maxun-browser.e2e.ts",
+  "passed": true,
+  "runner": "vitest web config with Chromium",
+  "assertions": {
+    "sessionScopedDetails": true,
+    "liveRrwebReplay": true,
+    "boundedEphemeralAdapter": true,
+    "screenshotFallback": true,
+    "resizableDetails": true,
+    "reloadReconnect": true,
+    "humanControlHandoff": true,
+    "apiKeyAbsentFromBrowserResources": true,
+    "telemetryAbsentFromSessionHistory": true,
+    "pageErrors": 0,
+    "warnings": 0
+  }
+}

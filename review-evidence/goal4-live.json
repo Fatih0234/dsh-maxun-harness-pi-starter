@@ -1,0 +1,25 @@
+{
+  "goal": 4,
+  "ownerSessionId": "goal4-live-1787095193849",
+  "capability": {
+    "issued": true,
+    "claimBound": true,
+    "shortLived": true,
+    "credentialPersisted": false
+  },
+  "stream": {
+    "unauthorizedRejected": true,
+    "connected": true,
+    "fullSnapshots": 2,
+    "reconnectFullSnapshot": true
+  },
+  "screenshot": {
+    "available": true,
+    "mimeType": "image/png",
+    "byteLength": 4254
+  },
+  "telemetry": {
+    "rrwebEventsPersisted": false,
+    "modelMessages": 0
+  }
+}

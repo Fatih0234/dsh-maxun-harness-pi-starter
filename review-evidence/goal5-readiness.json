@@ -1,0 +1,27 @@
+{
+  "status": "complete",
+  "goal4Boundary": "preserved-read-only-stream",
+  "goal3Baseline": ".local/evidence/goal3-live.json",
+  "goal5Contract": "goals/05-human-handoff.md",
+  "goal5Handoff": "docs/GOAL5_READINESS.md",
+  "goal5Criteria": {
+    "total": 8,
+    "implemented": 8
+  },
+  "evidence": {
+    "liveControl": ".local/evidence/goal5-live.json",
+    "webHandoff": ".local/evidence/goal5-web-acceptance.json",
+    "goal4Regression": ".local/evidence/goal4-web-acceptance.json"
+  },
+  "audits": {
+    "serverControlLease": true,
+    "commandLedgerAndReplayFence": true,
+    "cancellationOutcomeUnknown": true,
+    "pauseResumeAbortReuse": true,
+    "assistVsRecord": true,
+    "freshObservationAndValidationInvalidation": true,
+    "slowRace": true,
+    "credentialBoundary": true,
+    "goal4ReadOnlyUi": true
+  }
+}

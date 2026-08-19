@@ -1,0 +1,23 @@
+{
+  "status": "complete",
+  "goal1": "complete",
+  "goal2": "complete",
+  "goal3": "complete",
+  "goal4": "complete",
+  "goal5": "deferred",
+  "maxunSourcePin": "6ef14c7c89fac18b5ba771a1228ee064e1d7810f",
+  "harnessSourcePin": "99f6f02fecdb7dff40c3fbc9470f5907c29f74ca",
+  "existingMaxunRrwebEvent": true,
+  "existingMaxunDomReplayer": true,
+  "existingHarnessSessionUiSlots": true,
+  "existingHarnessDetailsShell": true,
+  "streamAuth": "implemented and live-verified; claim-bound route and Socket.IO validation pass",
+  "sensitiveInputMasking": "implemented and live-verified; password/text/contenteditable/iframe/canvas coverage passes",
+  "screenshotFallback": "implemented and live-verified; authenticated current-browser route and UI fallback pass",
+  "rrwebLicense": "MIT",
+  "rrwebSnapshotLicense": "MIT",
+  "licenseReview": "complete; rrweb, rrweb-snapshot, and Socket.IO client are MIT and notices are recorded",
+  "implementationScope": "read-only browser details view; no human/browser takeover",
+  "rrwebMaskingEvidence": ".local/evidence/goal4-rrweb-masking.json",
+  "handoff": "docs/GOAL4_READINESS.md"
+}

@@ -1,0 +1,35 @@
+{
+  "goal": 5,
+  "ownerSessionId": "goal5-live-1787100318615",
+  "criteria": {
+    "serverControlOwnership": true,
+    "epochFence": true,
+    "cancellationBridge": true,
+    "pauseResumeAbortPath": true,
+    "assistVsRecord": true,
+    "freshObservation": true,
+    "slowRace": true,
+    "credentialBoundary": true
+  },
+  "control": {
+    "agentEpoch": 1,
+    "humanEpoch": 2,
+    "returnedAgentEpoch": 3,
+    "foreignRejected": true,
+    "staleRejected": true,
+    "replayRejected": true
+  },
+  "commands": {
+    "humanAssist": true,
+    "handoffNavigated": true,
+    "recordedEdit": true,
+    "humanSecretApplied": true,
+    "humanSecretPersisted": false,
+    "cancellationStatus": "unknown"
+  },
+  "telemetry": {
+    "rawTextInEvidence": false,
+    "rawTextInControlResult": false,
+    "rrwebContainsSecret": false
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "goal": 5,
+  "test": "sources/deepseek-harness/apps/web/tests/maxun-browser.e2e.ts",
+  "passed": true,
+  "runner": "vitest web config with Chromium",
+  "assertions": {
+    "humanControlCapability": true,
+    "humanControlSocket": true,
+    "returnToAgent": true,
+    "apiKeyAbsentFromBrowserResources": true,
+    "telemetryAbsentFromSessionHistory": true,
+    "pageErrors": 0,
+    "warnings": 0
+  }
+}

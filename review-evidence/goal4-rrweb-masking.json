@@ -1,0 +1,21 @@
+{
+  "rrwebBundle": "umd/rrweb.min.js",
+  "eventCount": 18,
+  "sensitiveValuesLeaked": false,
+  "covered": {
+    "password": true,
+    "ordinaryInput": true,
+    "markedSensitiveText": true,
+    "contenteditable": true,
+    "iframe": {
+      "blocked": true,
+      "nestedInputNotLeaked": true
+    },
+    "canvas": {
+      "recordingDisabled": true,
+      "bitmapTextNotLeaked": true
+    }
+  },
+  "publicTextPreserved": true,
+  "maskedOutputObserved": true
+}
